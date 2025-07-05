@@ -25,11 +25,11 @@ const Navigation = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDar
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'glass-effect shadow-lg' : 'bg-transparent'
+      scrolled ? 'bg-white/10 dark:bg-black/30 backdrop-blur-lg border-b border-white/20 dark:border-white/10 shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="container-custom">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold gradient-text">
+          <div className="text-2xl font-bold bg-gradient-to-r from-green-700 to-green-800 bg-clip-text text-transparent">
             Portfolio
           </div>
           
@@ -38,7 +38,7 @@ const Navigation = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDar
               <a
                 key={item.href}
                 href={item.href}
-                className="text-neutral-700 dark:text-neutral-300 hover:text-primary-700 dark:hover:text-primary-400 transition-colors duration-300 font-medium"
+                className="text-neutral-700 dark:text-neutral-300 hover:text-green-700 dark:hover:text-green-400 transition-colors duration-300 font-medium"
               >
                 {item.label}
               </a>
@@ -68,13 +68,13 @@ const Navigation = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDar
         </div>
 
         {isOpen && (
-          <div className="md:hidden glass-effect rounded-xl mt-4 p-4 space-y-4">
+          <div className="md:hidden bg-white/10 dark:bg-black/30 backdrop-blur-lg border border-white/20 dark:border-white/10 rounded-xl mt-4 p-4 space-y-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-neutral-700 dark:text-neutral-300 hover:text-primary-700 dark:hover:text-primary-400 transition-colors duration-300 font-medium py-2"
+                className="block text-neutral-700 dark:text-neutral-300 hover:text-green-700 dark:hover:text-green-400 transition-colors duration-300 font-medium py-2"
               >
                 {item.label}
               </a>
@@ -88,38 +88,38 @@ const Navigation = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDar
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 relative overflow-hidden">
-      <div className="absolute inset-0 mesh-gradient opacity-30 dark:opacity-10"></div>
-      <div className="container-custom relative z-10">
-        <div className="text-center animate-fade-in">
-          <div className="inline-block p-4 rounded-2xl glass-effect mb-8 animate-float">
-            <Code size={48} className="text-primary-700" />
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 via-white to-yellow-50 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(at_40%_20%,hsla(28,100%,74%,1)_0px,transparent_50%),radial-gradient(at_80%_0%,hsla(189,100%,56%,1)_0px,transparent_50%),radial-gradient(at_0%_50%,hsla(355,100%,93%,1)_0px,transparent_50%),radial-gradient(at_80%_50%,hsla(340,100%,76%,1)_0px,transparent_50%),radial-gradient(at_0%_100%,hsla(22,100%,77%,1)_0px,transparent_50%),radial-gradient(at_80%_100%,hsla(242,100%,70%,1)_0px,transparent_50%),radial-gradient(at_0%_0%,hsla(343,100%,76%,1)_0px,transparent_50%)] opacity-30 dark:opacity-10"></div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="text-center">
+          <div className="inline-block p-4 rounded-2xl bg-white/10 dark:bg-black/30 backdrop-blur-lg border border-white/20 dark:border-white/10 mb-8 animate-bounce">
+            <Code size={48} className="text-green-700" />
           </div>
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6 gradient-text animate-slide-up">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-green-700 to-green-800 bg-clip-text text-transparent">
             Senior Full Stack
             <br />
             Developer
           </h1>
-          <p className="text-xl lg:text-2xl text-neutral-600 dark:text-neutral-400 mb-8 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl lg:text-2xl text-neutral-600 dark:text-neutral-400 mb-8 max-w-3xl mx-auto">
             Crafting exceptional digital experiences with modern technologies.
             Specialized in React, Laravel, and scalable cloud solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-            <a href="#projects" className="btn-primary">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#projects" className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               View My Work
             </a>
-            <a href="#contact" className="btn-secondary">
+            <a href="#contact" className="border-2 border-green-700 text-green-700 hover:bg-green-700 hover:text-white px-6 py-3 rounded-xl font-medium transition-all duration-300">
               Get In Touch
             </a>
           </div>
-          <div className="flex justify-center space-x-6 mt-12 animate-slide-up">
-            <a href="#" className="p-3 rounded-full glass-effect hover:bg-primary-100 dark:hover:bg-primary-900 transition-all duration-300">
+          <div className="flex justify-center space-x-6 mt-12">
+            <a href="#" className="p-3 rounded-full bg-white/10 dark:bg-black/30 backdrop-blur-lg border border-white/20 dark:border-white/10 hover:bg-green-100 dark:hover:bg-green-900 transition-all duration-300">
               <Github size={24} />
             </a>
-            <a href="#" className="p-3 rounded-full glass-effect hover:bg-primary-100 dark:hover:bg-primary-900 transition-all duration-300">
+            <a href="#" className="p-3 rounded-full bg-white/10 dark:bg-black/30 backdrop-blur-lg border border-white/20 dark:border-white/10 hover:bg-green-100 dark:hover:bg-green-900 transition-all duration-300">
               <Linkedin size={24} />
             </a>
-            <a href="#" className="p-3 rounded-full glass-effect hover:bg-primary-100 dark:hover:bg-primary-900 transition-all duration-300">
+            <a href="#" className="p-3 rounded-full bg-white/10 dark:bg-black/30 backdrop-blur-lg border border-white/20 dark:border-white/10 hover:bg-green-100 dark:hover:bg-green-900 transition-all duration-300">
               <Mail size={24} />
             </a>
           </div>
@@ -131,11 +131,11 @@ const Hero = () => {
 
 const About = () => {
   return (
-    <section id="about" className="section-padding bg-white dark:bg-neutral-900">
-      <div className="container-custom">
+    <section id="about" className="py-20 px-6 lg:px-8 bg-white dark:bg-neutral-900">
+      <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="animate-slide-up">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-8 gradient-text">
+          <div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-green-700 to-green-800 bg-clip-text text-transparent">
               Building the Future,
               <br />
               One Line at a Time
@@ -157,15 +157,15 @@ const About = () => {
               </p>
             </div>
             <div className="mt-8">
-              <a href="#" className="btn-primary inline-flex items-center gap-2">
+              <a href="#" className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2">
                 <Download size={20} />
                 Download Resume
               </a>
             </div>
           </div>
-          <div className="relative animate-slide-up">
-            <div className="aspect-square rounded-3xl glass-effect p-8 flex items-center justify-center">
-              <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center">
+          <div className="relative">
+            <div className="aspect-square rounded-3xl bg-white/10 dark:bg-black/30 backdrop-blur-lg border border-white/20 dark:border-white/10 p-8 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center">
                 <div className="text-white text-6xl font-bold">JS</div>
               </div>
             </div>
@@ -196,10 +196,10 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-padding bg-neutral-50 dark:bg-neutral-800">
-      <div className="container-custom">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 gradient-text">
+    <section id="skills" className="py-20 px-6 lg:px-8 bg-neutral-50 dark:bg-neutral-800">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-green-700 to-green-800 bg-clip-text text-transparent">
             Technical Expertise
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
@@ -209,8 +209,8 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <div key={index} className="card animate-slide-up group">
-              <div className="text-primary-700 dark:text-primary-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+            <div key={index} className="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 dark:border-neutral-700 group">
+              <div className="text-green-700 dark:text-green-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                 {category.icon}
               </div>
               <h3 className="text-2xl font-bold mb-6 text-neutral-800 dark:text-neutral-200">
@@ -218,7 +218,7 @@ const Skills = () => {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="skill-tag">
+                  <span key={skillIndex} className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm font-medium">
                     {skill}
                   </span>
                 ))}
@@ -254,27 +254,27 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section-padding bg-white dark:bg-neutral-900">
-      <div className="container-custom">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 gradient-text">
+    <section id="experience" className="py-20 px-6 lg:px-8 bg-white dark:bg-neutral-900">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-green-700 to-green-800 bg-clip-text text-transparent">
             Professional Journey
           </h2>
         </div>
 
         <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-8 pb-12 last:pb-0 animate-slide-up">
-              <div className="absolute left-0 top-0 w-4 h-4 bg-primary-600 rounded-full"></div>
-              <div className="absolute left-2 top-4 w-0.5 h-full bg-primary-200 dark:bg-primary-800 last:hidden"></div>
-              <div className="card ml-6">
-                <div className="text-primary-600 dark:text-primary-400 font-semibold mb-2">
+            <div key={index} className="relative pl-8 pb-12 last:pb-0">
+              <div className="absolute left-0 top-0 w-4 h-4 bg-green-600 rounded-full"></div>
+              <div className="absolute left-2 top-4 w-0.5 h-full bg-green-200 dark:bg-green-800 last:hidden"></div>
+              <div className="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 dark:border-neutral-700 ml-6">
+                <div className="text-green-600 dark:text-green-400 font-semibold mb-2">
                   {exp.year}
                 </div>
                 <h3 className="text-2xl font-bold mb-2 text-neutral-800 dark:text-neutral-200">
                   {exp.title}
                 </h3>
-                <div className="text-lg font-medium text-primary-700 dark:text-primary-400 mb-4">
+                <div className="text-lg font-medium text-green-700 dark:text-green-400 mb-4">
                   {exp.company}
                 </div>
                 <p className="text-neutral-600 dark:text-neutral-400">
@@ -315,10 +315,10 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding bg-neutral-50 dark:bg-neutral-800">
-      <div className="container-custom">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 gradient-text">
+    <section id="projects" className="py-20 px-6 lg:px-8 bg-neutral-50 dark:bg-neutral-800">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-green-700 to-green-800 bg-clip-text text-transparent">
             Featured Projects
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
@@ -328,7 +328,7 @@ const Projects = () => {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="card group animate-slide-up">
+            <div key={index} className="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 dark:border-neutral-700 group">
               <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
                 {project.image}
               </div>
@@ -340,14 +340,14 @@ const Projects = () => {
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, techIndex) => (
-                  <span key={techIndex} className="skill-tag">
+                  <span key={techIndex} className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm font-medium">
                     {tech}
                   </span>
                 ))}
               </div>
               <a 
                 href={project.link}
-                className="inline-flex items-center gap-2 text-primary-700 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium transition-colors"
+                className="inline-flex items-center gap-2 text-green-700 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 font-medium transition-colors"
               >
                 View Project <ExternalLink size={16} />
               </a>
@@ -361,10 +361,10 @@ const Projects = () => {
 
 const Contact = () => {
   return (
-    <section id="contact" className="section-padding bg-white dark:bg-neutral-900">
-      <div className="container-custom">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 gradient-text">
+    <section id="contact" className="py-20 px-6 lg:px-8 bg-white dark:bg-neutral-900">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-green-700 to-green-800 bg-clip-text text-transparent">
             Let's Build Something Amazing
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
@@ -373,7 +373,7 @@ const Contact = () => {
         </div>
 
         <div className="max-w-2xl mx-auto">
-          <div className="card animate-slide-up">
+          <div className="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 dark:border-neutral-700">
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -382,7 +382,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
                     placeholder="Your name"
                   />
                 </div>
@@ -392,7 +392,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -403,11 +403,11 @@ const Contact = () => {
                 </label>
                 <textarea
                   rows={6}
-                  className="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 rounded-xl border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
-              <button type="submit" className="btn-primary w-full">
+              <button type="submit" className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full">
                 Send Message
               </button>
             </form>
@@ -421,9 +421,9 @@ const Contact = () => {
 const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-white py-12">
-      <div className="container-custom">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center">
-          <div className="text-2xl font-bold gradient-text mb-4">
+          <div className="text-2xl font-bold bg-gradient-to-r from-green-700 to-green-800 bg-clip-text text-transparent mb-4">
             Portfolio
           </div>
           <p className="text-neutral-400 mb-6">
