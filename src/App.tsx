@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Download, Moon, Sun, Code, Server, Database, Globe } from 'lucide-react';
-import './App.css';
 
 const Navigation = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDarkMode: () => void }) => {
   const [isOpen, setIsOpen] = useState(false);
