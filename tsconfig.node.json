@@ -3,7 +3,10 @@
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true, // Good practice to add this
+    "strict": true // Good practice to add this
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"],
+  "files": [] // Add this line
 }

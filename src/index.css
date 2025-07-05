@@ -1,14 +1,13 @@
 /* src/index.css */
 
-/* Tailwind CSS directives - THESE ARE ESSENTIAL AND MUST BE UNCOMMENTED! */
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-/* Google Font import */
+/* Now, your @import for Google Fonts can come after these */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-/* Custom animation delays for the blob effect */
+/* Add the custom animation delays here if they are not already */
 .animation-delay-2000 {
   animation-delay: 2s;
 }
