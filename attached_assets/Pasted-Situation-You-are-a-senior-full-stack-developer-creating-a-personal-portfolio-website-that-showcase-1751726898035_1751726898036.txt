@@ -1,0 +1,82 @@
+Situation
+You are a senior full stack developer creating a personal portfolio website that showcases professional expertise, technical skills, and unique design sensibilities. The portfolio will be specifically hosted on Vercel, using React and Tailwind CSS for development.
+
+Task
+Design and develop a React-based portfolio website using Tailwind CSS, with a premium, minimal aesthetic that highlights full stack development skills, projects, and professional journey through an elegant, modern user interface, optimized for Vercel deployment.
+
+Objective
+Create a visually sophisticated, fully responsive portfolio that demonstrates technical proficiency, project ownership, and a distinctive professional identity while providing seamless navigation and engaging user experience, specifically tailored to Vercel and React + Tailwind ecosystem.
+
+Knowledge
+Color Palette:
+
+Primary: Forest Green / Deep Indigo
+Accent: Soft Gold / Lavender Gray
+Background: Cloud White / Slate Black
+Typography: Inter, DM Sans, Satoshi
+Technical Skills:
+
+Frontend: React, Tailwind CSS, JavaScript
+Backend: Laravel, ASP.NET Core, Node.js
+Tools: Git, AWS, Vercel, SQL Server, FileZilla
+Vercel & Tailwind-Specific Considerations:
+
+Utilize Tailwind CSS for responsive, utility-first styling
+Leverage Vercel's zero-configuration deployment
+Implement Tailwind's responsive design utilities
+Use Vercel's automatic performance optimizations
+Configure Tailwind for custom design system
+Implement serverless functions if needed
+Professional Focus:
+
+Emphasize real-world project deployment
+Highlight hands-on collaboration
+Demonstrate problem-solving approach
+Specific Implementation Guidelines
+
+Use mobile-first responsive design with Tailwind
+Implement smooth scroll navigation
+Create reusable React components with Tailwind classes
+Design with minimal, elite aesthetic
+Incorporate subtle animations using Tailwind transitions
+Develop dark/light mode toggle
+Optimize for Vercel's deployment pipeline
+Ensure full compatibility with Tailwind and Vercel
+Section Requirements
+
+Hero: Confident headline with CTA buttons
+About: Personal, impact-driven narrative
+Skills: Categorized, card-based layout using Tailwind
+Experience: Minimal timeline format
+Projects: 2-3 meaningful project showcases
+Certifications: Clean, concise presentation
+Resources: Downloadable PDF section
+Contact: Modal-based form with smooth transitions
+Critical Design Principles
+
+Avoid generic developer templates
+Use soft shadows and rounded corners
+Implement smooth micro-interactions
+Maintain ample whitespace
+Ensure typographic hierarchy
+Use icon-based navigation elements
+Leverage Tailwind's design utilities for precision
+Performance & Security
+
+Optimize for fast loading using Tailwind and Vercel
+Implement secure content management
+Ensure public viewability with restricted editing
+Use modern React and Tailwind best practices
+Leverage Vercel's built-in performance optimizations
+Implement efficient code splitting
+Vercel Deployment Specifics
+
+Configure vercel.json for custom settings
+Set up environment variables securely
+Utilize Vercel's preview and production deployments
+Implement continuous deployment from GitHub
+Ensure Tailwind CSS is properly configured for production build
+Output Expectations
+Produce a polished, professional portfolio website that goes beyond a standard developer template, communicating technical excellence through sophisticated design and meaningful content presentation, fully optimized for Vercel hosting and developed with React and Tailwind CSS.
+
+Your life depends on creating a portfolio that is NOT a generic developer template. Every design decision must scream elite, minimal, and purposeful.
